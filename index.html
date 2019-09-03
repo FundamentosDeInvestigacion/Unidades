@@ -4,157 +4,290 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/151782/isolated/preview/92af5898d55a2a1a0c648d9f0a3e7050-cabeza-con-el-icono-del-cerebro-by-vexels.png">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-    .enlace{
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    html{scroll-behavior: smooth;}
+    #contenido{
+        margin-left: 2%;
+    }
+    .subtema{
         text-decoration: none;
-        margin-left: 4%;    
+        list-style: none;
+        
     }
-    html{
-        scroll-behavior: smooth;
+    #unidad2{
+        margin-left: -2%;
     }
-    .iframe-container{
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; 
-  height: 0;
-}
-.iframe-container iframe{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
-<body>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Cerrar Menú</a>
-  <a href="https://fundamentosdeinvestigacion.github.io/Blog/" onclick="w3_close()" class="w3-bar-item w3-button">Página Principal</a>
-  <a href="https://fundamentosdeinvestigacion.github.io/Unidades/" onclick="w3_close()" class="w3-bar-item w3-button">Unidades</a>
-    <ol>
-        <li class="enlace"><a href="" class="enlace">Normas APA</a></li>
-    </ol>
+    .chueco{
+        margin-left: -4%;
+    }
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://uruguayeduca.anep.edu.uy/sites/default/files/styles/max_1300x1300/public/2017-03/ue_biblioteca-mediateca-icono.png?itok=s4un0MC8" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>Fundamentos de Investigación</b></h4>
+    <p class="w3-text-grey">Made by Alfonso and w3</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="https://fundamentosdeinvestigacion.github.io/Blog/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>CONTENIDO</a> 
+    <a href="https://fundamentosdeinvestigacion.github.io/Blog/#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>INFORMACIÓN</a> 
+    <a href="https://fundamentosdeinvestigacion.github.io/Blog/#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
 </nav>
 
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Blog</div>
-    <div class="w3-center w3-padding-16">Fundamentos de Investigación</div>
-  </div>
-</div>
-  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main" style="margin-left:300px">
 
- <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3>Normas APA</h3><br>
-      <h4><b>¿Qué son las normas APA?</b></h4>
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="https://uruguayeduca.anep.edu.uy/sites/default/files/styles/max_1300x1300/public/2017-03/ue_biblioteca-mediateca-icono.png?itok=s4un0MC8" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    
+       <div class="w3-container">
+           <br>
+        <h1 id="unidad1"><b>Unidad I</b></h1>
+      </div>
+    
+      
+  </header>
+    <div id=contenido>
+  <h3>Tema</h3>
+    <h5>Conceptos básicos de fundamentos de investigación como proceso de construcción social.</h5>
+    <h3>Subtemas</h3>
+    <ul>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-Uno1/"> 1.1 Relación hombre-conocimiento-realidad</a></li>
+        <li  class="subtema"><a href=""  class="subtema"> 
+            <ul>
+                <li>1.1.1. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-111/" class="subtema">Concepto de realidad y
+conocimiento
+</a></li>
+                <li>1.1.2. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-112/" class="subtema">Proceso de adquisición del
+conocimiento.
+</a></li>
+                <li>1.1.3. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-113/" class="subtema">Tipos de conocimiento</a></li>
+
+            </ul>
+        </a></li><br>
         
-      <h6><i>What are APA standards?</i></h6>
-      <p style="text-align: justify;">Las Normas APA son un conjunto de estándares creados por la American Psychological Association con el fin de unificar la forma de presentar trabajos escritos a nivel internacional, estas normas se usan especialmente para proyectos de grado o cualquier tipo de documentos que tenga que ver con investigación. 
-Las normas de la American Psychological Association son hoy en día uno de los estándares más reconocidos para la transmisión del conocimiento científico y académico. Desde el año 1929, cuando sale a luz el primer esbozo de las normas, hasta el presente, APA se ha convertido en un extenso manual para la divulgación del trabajo científico en todas las áreas del conocimiento.
-</p>
-    </div>
-      
-  </div>
-    <center><iframe src="https://onedrive.live.com/embed?cid=A57E4536B1582BF9&resid=A57E4536B1582BF9%21109&authkey=AIAkJ1AAWyLlcPg&em=2" width="402" height="327" frameborder="0" scrolling="no"></iframe></center>
-  <hr>
-    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-<div class="w3-container w3-padding-32 w3-center"> 
-    <h4><b>Escritura con claridad y precisión</b></h4>
-<p style="text-align: justify;">El Manual APA no regula de forma estricta el contenido de un trabajo académico, sin embargo apela a la comunicación eficaz de las ideas y conceptos. Las Normas APA 2018 invitan a la eliminación de las redundancias, ambigüedades, generalidades que entorpezcan la comprensión. La extensión adecuada de un texto es la rigurosamente necesaria para decir lo que deba ser dicho.<br>
-Con mucha frecuencia los trabajos académicos son rechazados por la mala redacción. No es necesario tener dotes de escritor o ser un experto de gramática y estilo. Solo se necesita orden y un poco de lógica para lograr una adecuada expresión. A continuación te presentamos los criterios para escribir con claridad y precisión cualquier texto de corte científico y académico:<br><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-12/"> 1.2 Proceso de construcción de la ciencia</a></li>
+        <li class="subtema"><a href="" class="subtema"> 
+            <ul>
+                <li>1.2.1. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-121/" class="subtema">Definición y características de la
+ciencia.
 
-La extensión<br>
-Las Normas APA establecen que la extensión de un escrito debe ser únicamente el necesario para transmitir de manera clara las ideas y juicios. No se debe ampliar innecesariamente el texto, pero tampoco se debe dejar inconcluso o poco argumentado. El lema APA “menos equivale a más” es aplicable a todas las pretensiones de alargar el tema a base de redundancias o repeticiones que no aporten. Se debe privilegiar la voz activa y el enfoque directo y preciso de las ideas. Un tema abreviado y puntual es preferible a uno largo e indefinido.<br><br>
+</a></li>
+                <li>1.2.2. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-122/" class="subtema">Proceso de construcción
+</a></li>
 
-
-    
-Continuidad de las ideas<br>
-La comprensión se logra cuando las ideas van hiladas con coherencia. Un punto debe llevar a otro de manera lógica, desde el principio a la conclusión. Evita saltar de una opinión a otra sin la conexión necesaria para propiciar el entendimiento, recuerda que tus lectores no necesariamente conocen el tema de tu investigación. Para ayudar a conseguir enlace entre las ideas puedes hacer uso de las siguientes frases de transición o nexos:<br><br>
- 
-- De tiempo: entonces, después, luego, posteriormente, seguidamente, antes, mientras, desde, etc.<br>
-- De causa-efecto: por tanto, consecuentemente, como resultado de.<br>
-- De adición: además, también, cierto, asimismo, en efecto, etc.<br>
-- De contraste: pero, no obstante, sin embargo, aunque, contrariamente, a pesar de.<br>
-    <br>
-<iframe src="https://onedrive.live.com/embed?cid=A57E4536B1582BF9&resid=A57E4536B1582BF9%21108&authkey=AHYKGt8R12-P9CA&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe>
-    
-</p>
-    
-        </div></div>
-    <div  class="iframe-container">
-<center><iframe width="" height="" src="https://www.youtube.com/embed/ayqc7QOLfkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></div>
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
-  
-  <hr id="about">
-    <div  class="iframe-container">
-<center><iframe width="" height="" src="https://www.youtube.com/embed/-xqRv8pPydU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></div>
-  
-    
-     <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="http://normasapa.net/wp-content/uploads/2014/09/normas-apa-aspectos-generales.png" alt="APa" style="width:100%">
-      <h3>Algunas Especificaciones</h3>
-      <p>Recuperado de: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpjkBRqgYYjXCIYR69tF65OMkqSKyNdkg8niu8k3BepIkwv6q">Enlace</a></p>
-    </div>
-      
-    <div class="w3-quarter">
-      <img src="https://www.edicionescastillo.com/sites/default/files/NORMAS%20APA_0.jpg" alt="Apa" style="width:100%">
-      <h3>Más Especificaciones</h3>
-        <p>Recuperado de: <a href="https://www.edicionescastillo.com/sites/default/files/NORMAS%20APA_0.jpg">Enlace</a></p>
-    </div>
-    <div class="w3-quarter">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpjkBRqgYYjXCIYR69tF65OMkqSKyNdkg8niu8k3BepIkwv6q" alt="Cherries" style="width:100%">
-      <h3>Normas APA</h3>
-        <p>Recuperado de: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpjkBRqgYYjXCIYR69tF65OMkqSKyNdkg8niu8k3BepIkwv6q">Enlace</a></p>
-    </div>
-
-<div class="w3-quarter">
-      <img src="http://aulas.uruguayeduca.edu.uy/pluginfile.php/76856/mod_book/chapter/9344/7_consejos_apa_freepik.svg%20%281%29.png" alt="Consejos" style="width:100%">
-      <h3>Algunos Consejos</h3>
-    
-    <p>Recuperado de: <a href="http://aulas.uruguayeduca.edu.uy/pluginfile.php/76856/mod_book/chapter/9344/7_consejos_apa_freepik.svg%20%281%29.png">Enlace</a></p>
-    </div>
-  </div>
-  
-    
-    
-    <div class="w3-container w3-padding-32 w3-center">  
-    <h3>¿Te intereso la información?</h3><br>
-      <h4><b>¡No te Preocupes!</b></h4>
+            </ul>
+        </a></li><br>
         
-      <h6><i>Puedes descargar la investigacion Completa</i></h6>
-      <p style="text-align: justify;">
-</p>
-        <form action="https://mega.nz/#!y1VxQSLB!M-_Ay4IK1Jn_43KKKLXLBL55165gmo_Jo-viAlkh4sg" target="_blank">
-            
-          <center>
-              <a href="https://mega.nz/#!y1VxQSLB"><button type="" class="w3-button w3-black w3-margin-bottom"><img src="https://images.vexels.com/media/users/3/151782/isolated/preview/92af5898d55a2a1a0c648d9f0a3e7050-cabeza-con-el-icono-del-cerebro-by-vexels.png" style="max-height: 20px;"><i class=""></i> Descargar Información</button></a></center>
-        </form>
-    </div>
+        <li ><a href="https://fundamentosdeinvestigacion.github.io/Unidades-13/"> 1.3 Clasificación de las ciencias</a></li><br>
+        <li ><a href="https://fundamentosdeinvestigacion.github.io/Unidades-14/"> 1.4 Métodos</a></li>
+        
+        <li  class="subtema"><a href="" class="subtema"> 
+            <ul>
+                <li >1.4.1. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-141/" class="subtema">Definición de método y técnica.
+
+</a></li>
+                <li>1.4.2. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-142/" class="subtema">Tipos de métodos; No científicos
+lógicos y científicos.
+
+</a></li>
+                <li>1.4.3. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-143/" class="subtema">Características, etapas y reglas
+del método científico.
+</a></li>
+
+            </ul>
+        </a></li><br>
+        
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-15/"> 1.5 La investigación y el investigador</a></li>
+        <li id="class" class="subtema"><a href="" class="subtema"> 
+            <ul>
+                <li>1.5.1. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-151/" class="subtema">Definición y características de la
+investigación.
+
+</a></li>
+                <li>1.5.2. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-152/" class="subtema">Características del investigador.
+</a></li>
+                <li>1.5.3. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-153/" class="subtema">Obstáculos de la investigación.</a></li>
+            </ul>
+        </a></li><br>
+        
+    </ul>
+        
+    
+    
+
+    
+    <div class="w3-container">
+        <h1 id="unidad2"><b>Unidad II</b></h1>
+      </div>
       
-  
-  
+
+    <h3>Tema</h3>
+    <h5>Herramientas de la comunicación oral
+y escrita en la investigación
+documental</h5>
+    <h3>Subtemas</h3>
+    <ul>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-21/"> 2.1 Distinción entre comunicación escrita y
+oral
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-22/"> 2.2 Técnicas de redacción: coherencia,
+Concordancia
+
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-23/"> 2.3 Normas y reglas ortográficas y de
+puntuación
+
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-24/"> 2.4 Tipología de textos académicos como
+herramientas del conocimiento
+científico (monografía, ensayo, reseña,
+reporte, tesis, protocolo e informe de
+investigación).
+
+</a></li><br>
+        
+        
+        
+ <div class="chueco">       
+        
+    <h1 id="unidad3"><b>Unidad III</b></h1>
+
+      
+<h3>Tema</h3>
+    <h5>Estudio del desarrollo de su profesión
+y su estado actual</h5>
+    <h3>Subtemas</h3>
+    <ul>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-31/"> 3.1 Historia, desarrollo y estado actual de la
+Profesión
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-32/"> 3.2 Los ámbitos del desarrollo de la
+profesión en el contexto social
+
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-33/"> 3.3 Las prácticas predominantes y
+Emergentes de la profesión en el
+contexto local, nacional e internacional.
+
+</a></li><br>
+        
+        
+    </ul>
+        
+        
+  <h1 id="unidad4"><b>Unidad IV</b></h1>      
+        <h3>Tema</h3>
+    <h5>Proceso de elaboración de una
+investigación documental</h5>
+    <h3>Subtemas</h3>
+    <ul>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-41/"> 4.1 Fuentes de investigación documental</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-42/"> 4.2 Instrumentos de Investigación
+documental
+</a></li><br>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-43/"> 4.3 Fuentes de investigación documental</a></li><br>
+        <li  class="subtema"><a href=""  class="subtema"> 
+            <ul>
+                <li>4.3.1. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-431/" class="subtema">Elección y delimitación del tema
+                    </a></li>
+         
+                <li>4.3.2. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-432/" class="subtema">Objetivos
+</a></li>
+                
+                <li>4.3.3. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-433/" class="subtema">Localización, selección y acopio de
+información de diferentes fuentes
+</a></li>
+                <li>4.3.4. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-434/" class="subtema">Diseño del esquema de trabajo
+(temario tentativo)
+</a></li>
+                <li>4.3.5. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-435/" class="subtema">Sistematización de información en
+los diversos tipos de fichas
+</a></li>
+                <li>4.3.6. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-436/" class="subtema">Organización del fichero</a></li>
+                <li>4.3.7. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-437/" class="subtema">Construcción lógica del aparato
+crítico (Uso de fuentes referenciales
+utilizadas como fundamento, citas
+textuales)
+</a></li>
+                <li>4.3.8. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-438/" class="subtema">Elaboración del informe en borrador</a></li>
+                <li>4.3.9. <a href="https://fundamentosdeinvestigacion.github.io/Unidades-439/" class="subtema">Correcciones</a></li>
+
+            </ul>
+        </a></li><br>
+        
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-44/"> 4.4 Presentación del informe.</a></li><br>
+        
+        
+    </ul>
+     
+     
+     
+     <h1 id="articulos"><b>Artículos Extra</b></h1>
+
+      
+<h3>Tema</h3>
+    <h5>Artículos relacionados a la Materia</h5>
+    <h3>Subtemas</h3>
+    <ul>
+        <li><a href="https://fundamentosdeinvestigacion.github.io/Unidades-A1-NormasAPA/"> A.1 Normas APA
+</a></li><br>
+        
+        
+        
+    </ul>
+</div>        
+        
+    </ul>
+</div>
+
+
+
+
+  <!-- Images of Me -->
+  <div class="w3-row-padding w3-padding-16" id="about"><center>
+    <div class="w3-col m6">
+      <img src="https://i2.wp.com/forwardteacher.com/wp-content/uploads/2018/12/shutterstock_760601845.jpg?resize=850%2C525" alt="Me" style="width:80%" >
+    </div>
+    <div class="w3-col m6">
+      <img src="http://www.universalmedios.com.ar/wp-content/uploads/2015/12/cerebro.jpg" alt="Me" style="width:80%" >
+    </div></center>
+  </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>Sobre Nosotros</b></h4>
+    <p>Un grupo de estudiantes apasionados por la investigación y desarrollo del conocimiento</p>
+    <hr>
+    
+    
+
   <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
     <div class="w3-third">
       <h3>FDI Blog</h3>
       <p>Nos apasiona la investigación y el desarrollo del conocimiento</p>
@@ -164,44 +297,50 @@ La comprensión se logra cuando las ideas van hiladas con coherencia. Un punto d
     <div class="w3-third">
       <h3>BLOG POSTS</h3>
       <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16"><a href="https://fundamentosdeinvestigacion.github.io/Blog/#portfolio">
-          <img src="https://images.vexels.com/media/users/3/151782/isolated/preview/92af5898d55a2a1a0c648d9f0a3e7050-cabeza-con-el-icono-del-cerebro-by-vexels.png" class="w3-left w3-margin-right" style="width:50px"></a>
-          <span class="w3-large">Página Principal</span><br>
+        <li class="w3-padding-16"><a href="https://fundamentosdeinvestigacion.github.io/Blog/#portfolio"></a>
+          <img src="https://images.vexels.com/media/users/3/151782/isolated/preview/92af5898d55a2a1a0c648d9f0a3e7050-cabeza-con-el-icono-del-cerebro-by-vexels.png" class="w3-left w3-margin-right" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Página principal</span><br>
           <span>Inicio</span>
         </li>
-        <li class="w3-padding-16"><a href="https://fundamentosdeinvestigacion.github.io/Unidades/">
-          <img src="https://images.vexels.com/media/users/3/157272/isolated/preview/e6d8b2a22f0f860af01343af96e94a8a-libros-apilados-vector-by-vexels.png" class="w3-left w3-margin-right" style="width:50px"></a>
+        <li class="w3-padding-16"><a href="https://fundamentosdeinvestigacion.github.io/Unidades/"></a>
+          <img src="https://images.vexels.com/media/users/3/157272/isolated/preview/e6d8b2a22f0f860af01343af96e94a8a-libros-apilados-vector-by-vexels.png" class="w3-left w3-margin-right" class="w3-left w3-margin-right" style="width:50px">
           <span class="w3-large">Unidades</span><br>
-          <span>Nuestro contenido</span>
+          <span>Más contenidos</span>
         </li> 
       </ul>
     </div>
 
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
+    <div class="w3-third">
+      <h3>PALABRAS CLAVE</h3>
       <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Investigación</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Conocimiento</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Estudio</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desarrollo</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Inteligencia</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Conocimiento</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Humano</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Razón</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Informe</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Blog</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fundamentos</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Concordancia</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Experiencia</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Práctica</span>
+        <span class="w3-tag w3-black w3-margin-bottom">Investigación</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Conocimiento</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Estudio</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Inteligencia</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Desarrollo</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Conocimiento</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Humano</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Razón</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Informe</span>
+          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Blog</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Fundamentos</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Concordancia</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Experiencia</span>
       </p>
     </div>
+
+  </div>
   </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by Alfonso <a href="#portfolio" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></div>
 
 <!-- End page content -->
-    </div>
+</div>
 
 <script>
 // Script to open and close sidebar
 function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
+    </div>
 </body>
 </html>
